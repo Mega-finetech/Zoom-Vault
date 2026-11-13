@@ -9,7 +9,7 @@ export default function Logo({ size = 32, showText = true }: LogoProps) {
   return (
     <div className="flex items-center gap-2">
       <Image
-        src="/logo.jpg"
+        src="/logo.png"
         alt="Zoom Vault logo"
         width={size}
         height={size}
