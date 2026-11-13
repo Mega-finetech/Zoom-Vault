@@ -1,4 +1,5 @@
 "use client";
+import Logo from "@/components/Logo";
 
 import { useRouter } from "next/navigation";
 import { LogOut, Plus, Search } from "lucide-react";
@@ -23,14 +24,20 @@ export default function Navbar({ search, onSearchChange, onAddClick }: NavbarPro
   return (
     <header className="sticky top-0 z-20 border-b border-white/5 bg-[#0A0F0D]/90 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
-        <h1 className="hidden text-lg font-semibold text-white sm:block">
-          Zoom <span className="text-[#3BCCA3]">Vault</span>
+        <h1 >
+            <div className="hidden sm:block">
+            <Logo />
+            </div>
+            <div className="sm:hidden">
+            <Logo showText={false} />
+            </div>
         </h1>
 
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
           <input
             type="text"
+            suppressHydrationWarning
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search course or title..."

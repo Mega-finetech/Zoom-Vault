@@ -33,7 +33,8 @@ export default function RecordingCard({ recording, onStatusChange, onDelete }: R
   return (
     <div
       className={cn(
-        "rounded-xl border border-white/5 bg-[#141C18] p-4",
+        "animate-fade-up rounded-xl border border-white/5 bg-[#141C18] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-[#3BCCA3]/30 hover:shadow-lg hover:shadow-[#3BCCA3]/5",
+        
         recording.status === "archived" && "opacity-60"
       )}
     >

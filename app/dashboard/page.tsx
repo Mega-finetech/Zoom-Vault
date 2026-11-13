@@ -16,5 +16,7 @@ export default async function DashboardPage() {
     .select("*")
     .order("created_at", { ascending: false });
 
-  return <DashboardClient initial={(data ?? []) as Recording[]} />;
+  const name = user.email?.split("@")[0] ?? "there";
+
+  return <DashboardClient initial={(data ?? []) as Recording[]} name={name} />;
 }

@@ -6,9 +6,28 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(59, 204, 163, 0.1), transparent 60%),
+    radial-gradient(700px 400px at -10% 110%, rgba(59, 204, 163, 0.06), transparent 60%),
+    #0a0f0d;
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.35s ease both;
 }
 
 ::-webkit-scrollbar {

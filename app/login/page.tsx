@@ -1,5 +1,5 @@
 "use client";
-
+import Logo from "@/components/Logo";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
@@ -46,16 +46,16 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-[#0A0F0D] px-4">
+    <main className="min-h-screen flex items-center justify-center px-4">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-sm space-y-4 rounded-2xl border border-white/5 bg-[#141C18] p-6"
+        className="animate-fade-up w-full max-w-sm space-y-4 rounded-2xl border border-white/5 bg-[#141C18] p-6 shadow-2xl shadow-[#3BCCA3]/5"
       >
-        <div>
-          <h1 className="text-2xl font-semibold text-white">Zoom Vault</h1>
-          <p className="text-sm text-white/50">
-            {mode === "signin" ? "Sign in to your vault" : "Create your vault"}
-          </p>
+        <div className="space-y-3">
+            <Logo size={44} />
+            <p className="text-sm text-white/50">
+                {mode === "signin" ? "Sign in to your vault" : "Create your vault"}
+            </p>
         </div>
 
         <input
