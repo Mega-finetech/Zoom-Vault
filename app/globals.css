@@ -43,3 +43,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #3bcca3;
 }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

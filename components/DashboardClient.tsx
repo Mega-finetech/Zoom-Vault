@@ -177,12 +177,12 @@ export default function DashboardClient({
                   </span>
                   <div className="h-px flex-1 bg-white/5" />
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2">{items.map(renderCard)}</div>
+                <div className="grid grid-cols-[minmax(0,1fr)] gap-3 sm:grid-cols-2">{items.map(renderCard)}</div>
               </section>
             ))}
           </div>
         ) : (
-          <div className="grid gap-3 sm:grid-cols-2">{visible.map(renderCard)}</div>
+          <div className="grid grid-cols-[minmax(0,1fr)] gap-3 sm:grid-cols-2">{visible.map(renderCard)}</div>
         )}
       </main>
 
