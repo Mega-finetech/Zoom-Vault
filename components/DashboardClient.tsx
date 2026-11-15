@@ -108,9 +108,9 @@ export default function DashboardClient({
     <>
       <Navbar search={search} onSearchChange={setSearch} onAddClick={() => setModalOpen(true)} />
 
-      <main className="mx-auto max-w-5xl space-y-5 px-4 py-6">
+      <main className="mx-auto w-full max-w-5xl space-y-5 px-4 py-6">
         <div className="animate-fade-up">
-          <h2 className="text-2xl font-semibold text-white">
+          <h2 className="break-words text-2xl font-semibold text-white">
             {greeting}, <span className="text-[#3BCCA3]">{name}</span>
           </h2>
           <p className="text-sm text-white/50">
@@ -123,13 +123,13 @@ export default function DashboardClient({
         <StatsBar recordings={recordings} />
 
         <div className="flex items-center gap-2">
-          <div className="flex flex-1 gap-2 overflow-x-auto">
+          <div className="flex min-w-0 flex-1 gap-2 overflow-x-auto">
             {filters.map((f) => (
               <button
                 key={f.key}
                 onClick={() => setFilter(f.key)}
                 className={cn(
-                  "rounded-full border px-3 py-1 text-sm transition",
+                  "shrink-0 rounded-full border px-3 py-1 text-sm transition",
                   filter === f.key
                     ? "border-[#3BCCA3] bg-[#3BCCA3]/10 text-[#3BCCA3]"
                     : "border-white/10 text-white/60 hover:text-white"
